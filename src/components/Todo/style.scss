@@ -1,0 +1,32 @@
+.todo {
+  border-bottom: 1px solid #ccc;
+
+  span,
+  button {
+    display: inline-block;
+  }
+  input[type="checkbox"],
+  label {
+    cursor: pointer;
+  }
+  > input {
+    vertical-align: middle;
+  }
+  .closeBtn {
+    padding: 0 0.5rem;
+  }
+  span {
+    width: 350px;
+    line-height: 1.5rem;
+    vertical-align: middle;
+    display: inline-block;
+  }
+  &.done {
+    span {
+      text-decoration: line-through;
+    }
+  }
+  &:last-child {
+    border-bottom: 0px solid #ccc;
+  }
+}

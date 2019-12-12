@@ -1,0 +1,6 @@
+$orange: #c0761d;
+.deviceList{
+  background: #000;
+  @import '../DeviceListTitle/style.css';
+  @import '../Device/style.css';
+}
