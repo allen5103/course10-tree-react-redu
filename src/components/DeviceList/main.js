@@ -60,7 +60,7 @@ class DeviceList extends React.Component {
   }
 
   render() {
-    const { list, fetchPosts, postsBySubreddit } = this.props;
+    const { fetchPosts, postsBySubreddit } = this.props;
     const { expanded, focusId } = this.state;
     // console.log(postsBySubreddit);
     return (
@@ -94,7 +94,7 @@ DeviceList.propTypes = {
   // list: PropTypes.arrayOf(PropTypes.object),
   initDevices: PropTypes.func.isRequired,
   fetchPosts: PropTypes.func.isRequired,
-  postsBySubreddit: PropTypes.object,
+  postsBySubreddit: PropTypes.shape({ list: PropTypes.array }),
 };
 DeviceList.defaultProps = {
   postsBySubreddit: {},
