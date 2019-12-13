@@ -5,10 +5,7 @@ import reducer from './reducer';
 
 const loggerMiddleware = createLogger();
 
-const init = { list: [] };
-// console.log(applyMiddleware);
 const store = createStore(reducer, applyMiddleware(
-  thunkMiddleware, // 讓我們來 dispatch() function
-  //   loggerMiddleware, // 巧妙的 middleware，用來 log action
+  thunkMiddleware, loggerMiddleware,
 ));
 export default store;
