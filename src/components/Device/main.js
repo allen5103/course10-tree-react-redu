@@ -5,15 +5,18 @@ class Device extends React.Component {
   constructor(...args) {
     super(...args);
     this.state = {
-
     };
     this.unitTypeConvert = this.unitTypeConvert.bind(this);
     this.setId = this.setId.bind(this);
   }
 
-  setId() {
-    const { id, setFocusId } = this.props;
+  setId(e) {
+    e.preventDefault();
+    const initX = e.clientX;
+    const initY = e.clientY;
+    const { id, setFocusId, getMousesPosition } = this.props;
     setFocusId(id);
+    getMousesPosition(initX, initY);
   }
 
   unitTypeConvert() {
@@ -62,7 +65,12 @@ class Device extends React.Component {
     return (
       <li className="device">
         <div className={`icon ${this.unitTypeConvert()}`} />
-        <div className={id === `${focusId}` ? 'info selected' : 'info'} onClick={this.setId}>{name}</div>
+        <div
+          className={id === `${focusId}` ? 'info selected' : 'info'}
+          onMouseDown={this.setId}
+        >
+          {name}
+        </div>
       </li>
     );
   }
@@ -74,6 +82,7 @@ Device.propTypes = {
   unitType: PropTypes.string.isRequired,
   focusId: PropTypes.number,
   setFocusId: PropTypes.func.isRequired,
+  getMousesPosition: PropTypes.func.isRequired,
 };
 
 Device.defaultProps = {

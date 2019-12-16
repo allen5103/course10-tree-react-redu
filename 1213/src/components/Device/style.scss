@@ -1,0 +1,68 @@
+$orange: #c0761d;
+.devices {
+    // display: none;
+    &.expanded {
+      display: block;
+    }
+    .device {
+      overflow: hidden;
+      height: 22px;
+      cursor: default;
+      .icon {
+        width: 20px;
+        height: 20px;
+        float: left;
+        background: url(../../img/DevicePanel/Device-ACTi.png);
+        margin-left: 40px;
+        &.A1 {
+          background-position: 0px 0;
+        }
+        &.A2 {
+          background-position: -20px 0;
+        }
+        &.B1 {
+          background-position: 0px -40px;
+        }
+        &.B2 {
+          background-position: -20px -40px;
+        }
+        &.B5 {
+          background-position: -80px -40px;
+        }
+        &.C1 {
+          background-position: 0px -80px;
+        }
+        &.D1 {
+          background-position: 0px -120px;
+        }
+        &.E1 {
+          background-position: 0px -160px;
+        }
+        &.E2 {
+          background-position: -20px -160px;
+        }
+        &.F1 {
+          background-position: 0px -200px;
+        }
+      }
+      .info {
+        min-width: 155px;
+        height: 20px;
+        float: left;
+        border: 1px solid transparent;
+        cursor: pointer;
+        color: white;
+        line-height: 20px;
+
+        margin-left: 5px;
+        &:hover {
+          border: 1px solid $orange;
+          background: url(../../img/bg/background-hover.png);
+        }
+        &.selected {
+          background: url(../../img/bg/background-selected.png);
+          border: 1px solid $orange;
+        }
+      }
+    }
+  }

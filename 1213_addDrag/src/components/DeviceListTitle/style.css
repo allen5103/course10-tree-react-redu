@@ -1,0 +1,51 @@
+.deviceListTitle {
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.deviceListTitle .expand,
+.deviceListTitle .icon {
+  width: 20px;
+  height: 20px;
+  float: left;
+  background: url(../../img/DevicePanel/Tree.png) no-repeat;
+}
+
+.deviceListTitle .expand {
+  background-position: 0 0;
+}
+
+.deviceListTitle .expand:hover {
+  background-position: -20px 0;
+}
+
+.deviceListTitle .expand.expanded {
+  background-position: -40px 0;
+}
+
+.deviceListTitle .expand.expanded:hover {
+  background-position: -60px 0;
+}
+
+.deviceListTitle .icon {
+  background-position: 0px -20px;
+}
+
+.deviceListTitle .info {
+  float: left;
+  border: 1px solid transparent;
+  margin-left: 5px;
+  min-width: 175px;
+  color: white;
+  line-height: 20px;
+}
+
+.deviceListTitle .info:hover {
+  border: 1px solid #c0761d;
+  background: url(../../img/bg/background-hover.png);
+}
+
+.deviceListTitle .info.selected {
+  background: url(../../img/bg/background-selected.png);
+  border: 1px solid #c0761d;
+}

@@ -1,0 +1,78 @@
+.devices.expanded {
+  display: block;
+}
+
+.devices .device {
+  overflow: hidden;
+  height: 22px;
+  cursor: default;
+}
+
+.devices .device .icon {
+  width: 20px;
+  height: 20px;
+  float: left;
+  background: url(../../img/DevicePanel/Device-ACTi.png);
+  margin-left: 40px;
+}
+
+.devices .device .icon.A1 {
+  background-position: 0px 0;
+}
+
+.devices .device .icon.A2 {
+  background-position: -20px 0;
+}
+
+.devices .device .icon.B1 {
+  background-position: 0px -40px;
+}
+
+.devices .device .icon.B2 {
+  background-position: -20px -40px;
+}
+
+.devices .device .icon.B5 {
+  background-position: -80px -40px;
+}
+
+.devices .device .icon.C1 {
+  background-position: 0px -80px;
+}
+
+.devices .device .icon.D1 {
+  background-position: 0px -120px;
+}
+
+.devices .device .icon.E1 {
+  background-position: 0px -160px;
+}
+
+.devices .device .icon.E2 {
+  background-position: -20px -160px;
+}
+
+.devices .device .icon.F1 {
+  background-position: 0px -200px;
+}
+
+.devices .device .info {
+  min-width: 155px;
+  height: 20px;
+  float: left;
+  border: 1px solid transparent;
+  cursor: pointer;
+  color: white;
+  line-height: 20px;
+  margin-left: 5px;
+}
+
+.devices .device .info:hover {
+  border: 1px solid #c0761d;
+  background: url(../../img/bg/background-hover.png);
+}
+
+.devices .device .info.selected {
+  background: url(../../img/bg/background-selected.png);
+  border: 1px solid #c0761d;
+}
